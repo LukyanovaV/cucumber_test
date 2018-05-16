@@ -1,0 +1,5 @@
+objects\WebDriverManager.class
+testcucumber\NewsYandexTest.class
+testcucumber\LoginYandexTest.class
+testcucumber\RunCucumberTest.class
+testcucumber\Stepdefs.class
