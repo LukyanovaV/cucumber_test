@@ -43,6 +43,36 @@
             <version>2.2.0</version>
         </dependency>
 
+        <dependency>
+            <groupId>net.serenity-bdd</groupId>
+            <artifactId>serenity-core</artifactId>
+            <version>1.9.16</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.serenity-bdd</groupId>
+            <artifactId>serenity-junit</artifactId>
+            <version>1.9.4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.serenity-bdd</groupId>
+            <artifactId>serenity-cucumber</artifactId>
+            <version>1.9.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.codeborne</groupId>
+            <artifactId>selenide</artifactId>
+            <version>4.11.4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.14.2</version>
+        </dependency>
+
     </dependencies>
 
     <build>
