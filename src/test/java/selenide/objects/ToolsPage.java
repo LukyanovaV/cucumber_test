@@ -9,6 +9,7 @@ public class ToolsPage {
 
 
     public IdeaMatrixPage chooseIdeaMatrix(){
+
         $(By.id("item-matrix")).click();
         return page(IdeaMatrixPage.class);
     }
