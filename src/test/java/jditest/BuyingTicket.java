@@ -3,7 +3,6 @@ package jditest;
 import com.epam.jdi.uitests.web.selenium.elements.composite.WebSite;
 import com.epam.jdi.uitests.web.testng.testRunner.TestNGBase;
 import cucumber.api.PendingException;
-import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -12,6 +11,7 @@ import jditest.objects.BlazeDemoSite;
 import org.testng.annotations.BeforeClass;
 
 import static jditest.objects.BlazeDemoSite.homePage;
+import static jditest.objects.BlazeDemoSite.reservePage;
 
 
 public class BuyingTicket{
@@ -29,9 +29,8 @@ public class BuyingTicket{
             }
 
     @When("^User choose the cheapest flight$")
-    public void userChooseTheCheapestFlight() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+    public void userChooseTheCheapestFlight()  {
+        reservePage.chooseCheapFli();
     }
 
     @And("^User input his \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\"$")

@@ -12,7 +12,7 @@ import org.testng.annotations.BeforeSuite;
 import static com.epam.jdi.uitests.core.settings.JDISettings.logger;
 
 @CucumberOptions(features = "src/test/resources/features/buying_ticket/buying_ticket.feature",
-                 format = "pretty"   )
+        format = "pretty"   )
 public class RunJDITest extends AbstractTestNGCucumberTests {
 
     public class BlazeDemoSiteInit extends TestNGBase {

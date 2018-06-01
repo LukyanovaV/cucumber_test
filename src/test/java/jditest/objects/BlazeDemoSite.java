@@ -7,6 +7,7 @@ import com.epam.jdi.uitests.web.selenium.elements.pageobjects.annotations.JPage;
 import com.epam.jdi.uitests.web.selenium.elements.pageobjects.annotations.JSite;
 import com.epam.jdi.uitests.web.selenium.elements.pageobjects.annotations.objects.JDropdown;
 
+
 @JSite(value = "http://blazedemo.com")
 public class BlazeDemoSite extends WebSite {
 

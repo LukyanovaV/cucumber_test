@@ -4,25 +4,24 @@ import com.epam.jdi.uitests.web.selenium.elements.common.Button;
 import com.epam.jdi.uitests.web.selenium.elements.complex.Selector;
 import com.epam.jdi.uitests.web.selenium.elements.composite.WebPage;
 import com.epam.jdi.uitests.web.selenium.elements.pageobjects.annotations.JFindBy;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.FindBy;
 
 public class HomePage extends WebPage {
 
-    @JFindBy(xpath = "/html/body/div[3]/form/select[1]")
-    public static Selector fromPort;
+    @FindBy(xpath = "/html/body/div[3]/form/select[1]")
+    public Selector fromPort;
 
-    @JFindBy(xpath = "//select[@name='toPort']")
-    public static Select toPort;
+    @FindBy(xpath = "//select[@name='toPort']")
+    public Selector toPort;
 
-    @JFindBy(css = "input.btn")
-    public static Button findFlights;
+    @FindBy(css = "input.btn")
+    public Button findFlights;
 
 
-    public static void searchFlights(String from, String to){
-        fromPort.select(from);
-        toPort.selectByValue(to);
-        findFlights.click();
+    public void searchFlights(String from, String to){
+        this.fromPort.select(from);
+        this.toPort.select(to);
+        this.findFlights.click();
 
     }
 
