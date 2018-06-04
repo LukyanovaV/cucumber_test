@@ -8,6 +8,6 @@ Feature: Buying ticket on blazedemo.com
     Then User get his purchase
 
     Examples:
-    | depCity | destCity | name         | address       | city   | state         | zipCode | cardType    | creditCardNum | month | year | nameOnCard   |
-    | Paris   | Rome     | Ivan Maximov | Baker str. 26 | Moscow | Moscow oblast | 3472839 | Master Card | 2323343443223 | 2     | 2019 | Ivan Maximov |
-
+    | depCity | destCity | name         | address       | city   | state         | zipCode | cardType         | creditCardNum | month | year | nameOnCard   |
+    | Paris   | Rome     | Ivan Maximov | Baker str. 26 | Moscow | Moscow oblast | 3472839 | American Express | 2323343443223 | 2     | 2019 | Ivan Maximov |
+    | Paris   | London   | Ivan Maximov | Baker str. 26 | Moscow | Moscow oblast | 3472839 | American Express | 2323343443223 | 2     | 2019 | Ivan Maximov |

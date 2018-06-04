@@ -1,17 +1,12 @@
 package jditest;
 
-import com.epam.jdi.uitests.web.selenium.elements.composite.WebSite;
-import com.epam.jdi.uitests.web.testng.testRunner.TestNGBase;
-import cucumber.api.PendingException;
+
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import jditest.objects.BlazeDemoSite;
-import org.testng.annotations.BeforeClass;
 
-import static jditest.objects.BlazeDemoSite.homePage;
-import static jditest.objects.BlazeDemoSite.reservePage;
+import static jditest.objects.BlazeDemoSite.*;
 
 
 public class BuyingTicket{
@@ -34,14 +29,26 @@ public class BuyingTicket{
     }
 
     @And("^User input his \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\"$")
-    public void userInputHis(String arg0, String arg1, String arg2, String arg3, String arg4, String arg5, String arg6, String arg7, String arg8, String arg9) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+    public void userInputHis(String arg0, String arg1, String arg2, String arg3, String arg4, String arg5, String arg6, String arg7, String arg8, String arg9){
+        perchasePage.shouldBeOpened();
+        perchasePage.checkFlight(reservePage.Airlane, reservePage.FlightNum, reservePage.Price);
+        perchasePage.InputName(arg0)
+                    .InputAddres(arg1)
+                    .InputCity(arg2)
+                    .InputState(arg3)
+                    .InputZipCode(arg4)
+                    .SetCardType(arg5)
+                    .InputCreditCardNum(arg6)
+                    .InputCreditCardMonth(arg7)
+                    .InputCreditCardYear(arg8)
+                    .InputNameOnCard(arg9)
+                    .complete();
+
     }
 
     @Then("^User get his purchase$")
-    public void userGetHisPurchase() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+    public void userGetHisPurchase(){
+        confirmationPage.shouldBeOpened();
+        confirmationPage.statusIsPendingCapture();
     }
 }

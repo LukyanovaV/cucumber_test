@@ -15,6 +15,14 @@ public class BlazeDemoSite extends WebSite {
     public static HomePage homePage;
     @JPage(url = "/reserve.php", title = "BlazeDemo - reserve")
     public static ReservePage reservePage;
+    @JPage(url = "/purchase.php", title = "BlazeDemo Purchase")
+    public static PurchasePage perchasePage;
+    @JPage(url = "/confirmation.php", title = "BlazeDemo Confirmation")
+    public static ConfirmationPage confirmationPage;
+
+    String Price;
+    String Airlaine;
+
 
 
 

@@ -14,6 +14,10 @@ import java.util.stream.Collectors;
 
 public class ReservePage extends WebPage {
 
+    public static Float Price;
+    public static String Airlane;
+    public static String FlightNum;
+
 
     @FindBy(xpath = "//td[6]")
     List <WebElement> price;
@@ -22,7 +26,10 @@ public class ReservePage extends WebPage {
     List <Button> chooseBtn;
 
     @FindBy(xpath = "//td[2]")
-    List <WebElement> flightNum;
+    List <WebElement> flight;
+
+    @FindBy(xpath = "//td[3]")
+    List <WebElement> airline;
 
     public List <Float> getListFlights() {
 
@@ -35,7 +42,9 @@ public class ReservePage extends WebPage {
 
     public void chooseCheapFli(){
       Integer min = getListFlights().indexOf(getListFlights().stream().min(Float::compareTo).get());
-      setWaitTimeout(10);
+      Price = getListFlights().get(min);
+      Airlane = airline.get(min).getText();
+      FlightNum = flight.get(min).getText();
       Button cg = chooseBtn.get(min);
       cg.click();
     }

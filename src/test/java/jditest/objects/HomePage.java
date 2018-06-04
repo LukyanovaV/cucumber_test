@@ -3,7 +3,6 @@ package jditest.objects;
 import com.epam.jdi.uitests.web.selenium.elements.common.Button;
 import com.epam.jdi.uitests.web.selenium.elements.complex.Selector;
 import com.epam.jdi.uitests.web.selenium.elements.composite.WebPage;
-import com.epam.jdi.uitests.web.selenium.elements.pageobjects.annotations.JFindBy;
 import org.openqa.selenium.support.FindBy;
 
 public class HomePage extends WebPage {
@@ -24,5 +23,6 @@ public class HomePage extends WebPage {
         this.findFlights.click();
 
     }
+
 
 }
